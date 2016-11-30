@@ -1,0 +1,116 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+	background:url(../img/header/bg_img_home.jpg) no-repeat fixed;
+	background-size:cover;
+	font-family: 'Roboto', sans-serif;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+*{  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;}
+  
+  
+  
+.wapper{ float:left; width:100%;}
+#header{ float:left; width:100%; padding:12px 0px; background:#fff; box-shadow:0px 0px 3px #ddd;}
+#container{width:100%; max-width:1100px; margin:0 auto;}
+.logo{float:left; width:auto;}
+a.header-right{ float:right; width:auto; text-decoration:none; background:#c31c1c; padding:8px 15px; font-size:14px; color:#fff; border-radius:3px; margin:10px 0px 0px 10px; text-transform:capitalize;}
+a.header-right:hover{ background:#d34846;}
+#footer{float:left; width:100%; background:#f1f1f1; padding:12px 0px; text-align:center; font-size:14px; color:#000; margin:12px 0px 0px;bottom:0px; position:absolute;}
+.inner_pages_contaner{ float:left; width:100%; padding:30px 0px;}
+.signup_form_inner{width:100%; max-width:650px; margin:0 auto; background:rgba(0,0,0,0.6) no-repeat; padding:20px; border-radius:15px; border:3px solid #fff; overflow:hidden;}
+.signup_form_inner form{ float:left; width:100%;}
+.signup_form_inner form .form-group{ float:left; width:100%; margin:0px 0px 15px 0px;}
+.signup_form_inner form .form-group label{ float:left;width:20%; font-size:14px; color:#fff; margin:0px 0px 0px 0px; text-transform:capitalize; padding:9px 0px 0px;}
+.signup_form_inner form .form-group input{float:right; width:75%; padding:10px; background:#fff; border-radius:3px; border:none;}
+.signup_form_inner form .form-group input#exampleInputFile{ float:left; width:auto; background:none; color:#fff; padding:0px;}
+.signup_form_inner form  p.help-block{ float:left; width:100%; font-size:14px; color:#fff; margin:10px 0px 0px;}
+.signup_form_inner form .checkbox{ float:left; width:100%; margin:0px 0px 10px 0px;}
+.signup_form_inner form .checkbox label{ float:left; width:100%; font-size:14px; color:#fff; margin:0px 0px 0px 0px; padding:9px 0px 0px;}
+.signup_form_inner form button.btn.btn-default{ float:Left; width:auto; background:#c31c1c; padding:10px 30px; color:#fff; text-transform:capitalize; border:none; border-radius:3px; margin-left:28px;}
+.signup_form_inner form button.btn.btn-default:hover{ background:#d34846; color:#fff;}
+.dorp_sign{ float:right; width:75% !important; margin:0px 0px 15px 0px !important;}
+.dorp_sign select{ float:right !important; width:100% !important; padding:18px 10px !important; background:#fff !important; border-radius:3px !important;}
+.dorp_sign input{ float:left !important; width:96% !important; /** padding:18px 10px !important;**/ background:#fff !important; border-radius:3px !important; border:none !important;    margin: 1px 0px 0px;}
+.dorp_sign input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #000;
+}
+.dorp_sign input::-moz-placeholder { /* Firefox 19+ */
+   color: #000;
+}
+.dorp_sign input:-ms-input-placeholder { /* IE 10+ */
+    color: #000;
+}
+.dorp_sign input:-moz-placeholder { /* Firefox 18- */
+    color: #000;
+}
+
+.signup_form_inner form .form-group input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #000;
+}
+.signup_form_inner form .form-group input::-moz-placeholder { /* Firefox 19+ */
+   color: #000;
+}
+.signup_form_inner form .form-group input:-ms-input-placeholder { /* IE 10+ */
+    color: #000;
+}
+.signup_form_inner form .form-group input:-moz-placeholder { /* Firefox 18- */
+    color: #000;
+}
+
+.dorp_sign select::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #000;
+}
+.dorp_sign select::-moz-placeholder { /* Firefox 19+ */
+  color: #000;
+}
+.dorp_sign select:-ms-input-placeholder { /* IE 10+ */
+  color: #000;
+}
+.dorp_sign select:-moz-placeholder { /* Firefox 18- */
+  color: #000;
+}
+.signup_form_inner form .form-group ul{float:right; width:75%;}
+.signup_form_inner form .form-group ul li{float:left; width:49%;}
+.signup_form_inner form .form-group ul li:nth-child(even){float:right;}
+.signup_form_inner form .form-group ul li input{float:left; width:100%;}

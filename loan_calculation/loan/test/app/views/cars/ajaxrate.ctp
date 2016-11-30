@@ -1,0 +1,1 @@
+{"innerrate":<?= $rateArr[0]['Rate']['innerrate'] ?>,"lowrate":<?= $rateArr[0]['Rate']['lowrate'] ?>,"normalrate":<?= $rateArr[0]['Rate']['rate'] ?>}

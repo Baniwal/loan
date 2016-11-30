@@ -1,0 +1,920 @@
+-- phpMyAdmin SQL Dump
+-- version 3.2.3
+-- http://www.phpmyadmin.net
+--
+-- ホスト: jk.my22.etius.jp
+-- 生成時間: 2016 年 11 月 21 日 15:58
+-- サーバのバージョン: 5.1.39
+-- PHP のバージョン: 5.2.9
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+--
+-- データベース: `test`
+--
+CREATE DATABASE `test` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `test`;
+
+-- --------------------------------------------------------
+
+--
+-- テーブルの構造 `MB_accesslogs`
+--
+
+CREATE TABLE IF NOT EXISTS `MB_accesslogs` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `parentid` int(11) DEFAULT NULL,
+  `mode` varchar(10) NOT NULL,
+  `plan` varchar(10) NOT NULL,
+  `bmst` varchar(16) NOT NULL,
+  `carname` varchar(64) DEFAULT NULL,
+  `price` varchar(32) DEFAULT NULL,
+  `classname` varchar(10) NOT NULL,
+  `rate` varchar(10) NOT NULL,
+  `normalrate` varchar(10) DEFAULT NULL,
+  `milage` varchar(6) DEFAULT NULL,
+  `installments` varchar(10) NOT NULL,
+  `loanprincipal` varchar(10) NOT NULL,
+  `pricetax` varchar(10) NOT NULL,
+  `optiontotal` varchar(10) NOT NULL,
+  `sonota` varchar(10) DEFAULT NULL,
+  `dealeraccessories` varchar(10) NOT NULL,
+  `mmmaintenance` varchar(10) NOT NULL,
+  `mmsupport` varchar(10) NOT NULL,
+  `salesexpenses` varchar(10) NOT NULL,
+  `mbinsureance` varchar(10) NOT NULL,
+  `dealeroption` varchar(10) DEFAULT NULL,
+  `discount` varchar(10) DEFAULT NULL,
+  `mmmprice` varchar(10) DEFAULT NULL,
+  `mmsprice` varchar(10) DEFAULT NULL,
+  `accessoryprice` varchar(10) DEFAULT NULL,
+  `taxtotal` varchar(10) NOT NULL,
+  `downpayment` varchar(10) NOT NULL,
+  `bonuspayment` varchar(10) NOT NULL,
+  `lastpayment` varchar(10) NOT NULL,
+  `interest` varchar(10) NOT NULL,
+  `total` varchar(10) NOT NULL,
+  `difference` varchar(10) DEFAULT NULL,
+  `bonustimes` varchar(10) NOT NULL,
+  `monthlypayment` varchar(10) NOT NULL,
+  `firstpayment` varchar(10) NOT NULL,
+  `leasingprice` varchar(12) NOT NULL DEFAULT '0',
+  `imagepath01` varchar(200) DEFAULT NULL,
+  `imagepath02` varchar(200) DEFAULT NULL,
+  `imagepath03` varchar(200) DEFAULT NULL,
+  `imagepath04` varchar(200) DEFAULT NULL,
+  `imagepath05` varchar(200) DEFAULT NULL,
+  `imagepath06` varchar(200) DEFAULT NULL,
+  `imagepath07` varchar(200) DEFAULT NULL,
+  `imagepath08` varchar(200) DEFAULT NULL,
+  `imagepath09` varchar(200) DEFAULT NULL,
+  `imagepath10` varchar(200) DEFAULT NULL,
+  `pdf` tinyint(1) NOT NULL DEFAULT '0',
+  `salesman` varchar(80) DEFAULT NULL,
+  `created` datetime NOT NULL,
+  `ip` varchar(200) NOT NULL,
+  `agent` varchar(200) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=16575 ;
+
+-- --------------------------------------------------------
+
+--
+-- テーブルの構造 `MB_accesslogs_120406`
+--
+
+CREATE TABLE IF NOT EXISTS `MB_accesslogs_120406` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `parentid` int(11) DEFAULT NULL,
+  `mode` varchar(10) NOT NULL,
+  `plan` varchar(10) NOT NULL,
+  `bmst` varchar(16) NOT NULL,
+  `carname` varchar(64) DEFAULT NULL,
+  `price` varchar(32) DEFAULT NULL,
+  `classname` varchar(10) NOT NULL,
+  `rate` varchar(10) NOT NULL,
+  `normalrate` varchar(10) DEFAULT NULL,
+  `milage` varchar(5) DEFAULT NULL,
+  `installments` varchar(10) NOT NULL,
+  `loanprincipal` varchar(10) NOT NULL,
+  `pricetax` varchar(10) NOT NULL,
+  `optiontotal` varchar(10) NOT NULL,
+  `sonota` varchar(10) DEFAULT NULL,
+  `dealeraccessories` varchar(10) NOT NULL,
+  `mmmaintenance` varchar(10) NOT NULL,
+  `mmsupport` varchar(10) NOT NULL,
+  `salesexpenses` varchar(10) NOT NULL,
+  `mbinsureance` varchar(10) NOT NULL,
+  `dealeroption` varchar(10) DEFAULT NULL,
+  `regfee` varchar(10) DEFAULT NULL,
+  `discount` varchar(10) DEFAULT NULL,
+  `taxtotal` varchar(10) NOT NULL,
+  `downpayment` varchar(10) NOT NULL,
+  `bonuspayment` varchar(10) NOT NULL,
+  `lastpayment` varchar(10) NOT NULL,
+  `interest` varchar(10) NOT NULL,
+  `total` varchar(10) NOT NULL,
+  `difference` varchar(10) DEFAULT NULL,
+  `bonustimes` varchar(10) NOT NULL,
+  `monthlypayment` varchar(10) NOT NULL,
+  `firstpayment` varchar(10) NOT NULL,
+  `leasingprice` varchar(12) NOT NULL DEFAULT '0',
+  `imagepath01` varchar(200) DEFAULT NULL,
+  `imagepath02` varchar(200) DEFAULT NULL,
+  `imagepath03` varchar(200) DEFAULT NULL,
+  `imagepath04` varchar(200) DEFAULT NULL,
+  `imagepath05` varchar(200) DEFAULT NULL,
+  `imagepath06` varchar(200) DEFAULT NULL,
+  `imagepath07` varchar(200) DEFAULT NULL,
+  `imagepath08` varchar(200) DEFAULT NULL,
+  `imagepath09` varchar(200) DEFAULT NULL,
+  `imagepath10` varchar(200) DEFAULT NULL,
+  `pdf` tinyint(1) NOT NULL DEFAULT '0',
+  `salesman` varchar(20) DEFAULT NULL,
+  `created` datetime NOT NULL,
+  `ip` varchar(200) NOT NULL,
+  `agent` varchar(200) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=752 ;
+
+-- --------------------------------------------------------
+
+--
+-- テーブルの構造 `MB_alsoptions`
+--
+
+CREATE TABLE IF NOT EXISTS `MB_alsoptions` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `optionid` varchar(200) NOT NULL,
+  `special` tinyint(1) DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=70 ;
+
+-- --------------------------------------------------------
+
+--
+-- テーブルの構造 `MB_bptrates`
+--
+
+CREATE TABLE IF NOT EXISTS `MB_bptrates` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `patternid` int(11) NOT NULL,
+  `installments` int(11) NOT NULL,
+  `maxrate` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=50 ;
+
+-- --------------------------------------------------------
+
+--
+-- テーブルの構造 `MB_calclogs`
+--
+
+CREATE TABLE IF NOT EXISTS `MB_calclogs` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `mode` int(11) DEFAULT NULL,
+  `tax` varchar(10) DEFAULT NULL,
+  `bmst` varchar(30) DEFAULT NULL,
+  `classname` varchar(60) DEFAULT NULL,
+  `carname` varchar(60) DEFAULT NULL,
+  `plan` varchar(10) DEFAULT NULL,
+  `registyear` varchar(10) DEFAULT NULL,
+  `registmonth` varchar(10) DEFAULT NULL,
+  `pricetax` varchar(10) DEFAULT NULL,
+  `discount` varchar(10) DEFAULT NULL,
+  `makeroption` varchar(10) DEFAULT NULL,
+  `dealeroption` varchar(10) DEFAULT NULL,
+  `taxtotal` varchar(10) DEFAULT NULL,
+  `salesexpenses` varchar(10) DEFAULT NULL,
+  `sonota` varchar(10) DEFAULT NULL,
+  `mmmprice` varchar(10) DEFAULT NULL,
+  `mmsprice` varchar(10) DEFAULT NULL,
+  `evprice` varchar(10) DEFAULT NULL,
+  `mbinsureance` varchar(10) DEFAULT NULL,
+  `zansai` varchar(10) DEFAULT NULL,
+  `genkin` varchar(10) DEFAULT NULL,
+  `shitadori` varchar(10) DEFAULT NULL,
+  `downpayment` varchar(10) DEFAULT NULL,
+  `loanprincipal` varchar(10) DEFAULT NULL,
+  `cartotal` varchar(10) DEFAULT NULL,
+  `installments` varchar(10) DEFAULT NULL,
+  `rate` varchar(10) DEFAULT NULL,
+  `normalrate` varchar(10) DEFAULT NULL,
+  `firstpayment` varchar(10) DEFAULT NULL,
+  `monthlypayment` varchar(10) DEFAULT NULL,
+  `lastpayment` varchar(10) DEFAULT NULL,
+  `bonuspayment` varchar(10) DEFAULT NULL,
+  `bonustimes` varchar(10) DEFAULT NULL,
+  `bonusmonth1` varchar(10) DEFAULT NULL,
+  `bonusmonth2` varchar(10) DEFAULT NULL,
+  `monthlyinterest` varchar(10) DEFAULT NULL,
+  `lastinterest` varchar(10) DEFAULT NULL,
+  `interest` varchar(10) DEFAULT NULL,
+  `totalinterest` varchar(10) NOT NULL,
+  `loantotal` varchar(10) DEFAULT NULL,
+  `leafletimage` varchar(20) DEFAULT NULL,
+  `difference` varchar(10) DEFAULT NULL,
+  `salesman` int(11) DEFAULT NULL,
+  `created` datetime NOT NULL,
+  `prate` varchar(10) DEFAULT NULL,
+  `pinterest` varchar(10) DEFAULT NULL,
+  `ploantotal` varchar(10) DEFAULT NULL,
+  `pfirstpayment` varchar(10) DEFAULT NULL,
+  `pmonthlypayment` varchar(10) DEFAULT NULL,
+  `svicost` varchar(10) DEFAULT NULL,
+  `srepair` varchar(10) DEFAULT NULL,
+  `smaintenance` varchar(10) DEFAULT NULL,
+  `soption` varchar(10) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2486 ;
+
+-- --------------------------------------------------------
+
+--
+-- テーブルの構造 `MB_cars`
+--
+
+CREATE TABLE IF NOT EXISTS `MB_cars` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `bmst` varchar(32) DEFAULT NULL,
+  `classname` varchar(32) DEFAULT NULL,
+  `carname` varchar(64) DEFAULT NULL,
+  `qc_carname` varchar(80) DEFAULT NULL,
+  `price` varchar(32) DEFAULT NULL,
+  `pricetax` varchar(32) DEFAULT NULL,
+  `price2` varchar(32) DEFAULT NULL,
+  `pricetax2` varchar(32) DEFAULT NULL,
+  `reduce_automobiletax` varchar(10) DEFAULT NULL,
+  `activemodel` tinyint(1) DEFAULT NULL,
+  `swpmodel` tinyint(1) DEFAULT NULL,
+  `accessoryprice` varchar(16) DEFAULT NULL,
+  `managementfee` varchar(16) DEFAULT NULL,
+  `bonuspaymentratepattern` int(11) DEFAULT NULL,
+  `initratepattern` int(11) DEFAULT NULL,
+  `wpinitratepattern` int(11) DEFAULT NULL,
+  `swpinitratepattern` int(11) DEFAULT NULL,
+  `stdinitratepattern` int(11) DEFAULT NULL,
+  `supinitratepattern` int(11) DEFAULT NULL,
+  `alsinitratepattern` int(11) DEFAULT NULL,
+  `clsinitratepattern` int(11) DEFAULT NULL,
+  `wplptpattern` int(11) DEFAULT NULL,
+  `wpratepattern` varchar(20) DEFAULT NULL,
+  `wpbptpattern` int(11) DEFAULT NULL,
+  `wplpppattern` int(11) DEFAULT NULL,
+  `swplptrate` int(11) DEFAULT NULL,
+  `swpratepattern` varchar(20) DEFAULT NULL,
+  `swpbptpattern` int(11) DEFAULT NULL,
+  `swplpppattern` int(11) DEFAULT NULL,
+  `stdratepattern` varchar(20) DEFAULT NULL,
+  `stdbptpattern` int(11) DEFAULT NULL,
+  `stdlpppattern` int(11) DEFAULT NULL,
+  `supratepattern` varchar(20) DEFAULT NULL,
+  `supbptpattern` int(11) DEFAULT NULL,
+  `suplpppattern` int(11) DEFAULT NULL,
+  `alsratepattern` varchar(20) DEFAULT NULL,
+  `alslptpattern` int(11) DEFAULT NULL,
+  `alsbptpattern` int(11) DEFAULT NULL,
+  `alslpppattern` int(11) DEFAULT NULL,
+  `clsratepattern` varchar(20) DEFAULT NULL,
+  `popmodel` int(11) DEFAULT '0',
+  `popstart` datetime DEFAULT NULL,
+  `popfinish` datetime DEFAULT NULL,
+  `pop` int(11) DEFAULT NULL,
+  `popurl` varchar(200) DEFAULT NULL,
+  `popcomment` text,
+  `qc_classname` varchar(100) DEFAULT NULL,
+  `qc_classorder` varchar(3) DEFAULT NULL,
+  `mmm` varchar(10) DEFAULT NULL,
+  `mms` varchar(10) DEFAULT NULL,
+  `ev` varchar(10) DEFAULT NULL,
+  `mmm2` varchar(10) DEFAULT NULL,
+  `mms2` varchar(10) DEFAULT NULL,
+  `ev2` varchar(10) DEFAULT NULL,
+  `automobiletax` int(11) DEFAULT NULL,
+  `tonnagetax` int(11) DEFAULT NULL,
+  `recyclefee` int(11) DEFAULT NULL,
+  `reduce_tonnagetaxrate` int(11) DEFAULT NULL,
+  `reduce_acquisitiontaxrate` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=222 ;
+
+-- --------------------------------------------------------
+
+--
+-- テーブルの構造 `MB_cars_20161115163105`
+--
+
+CREATE TABLE IF NOT EXISTS `MB_cars_20161115163105` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `bmst` varchar(32) DEFAULT NULL,
+  `classname` varchar(32) DEFAULT NULL,
+  `carname` varchar(64) DEFAULT NULL,
+  `qc_carname` varchar(80) DEFAULT NULL,
+  `price` varchar(32) DEFAULT NULL,
+  `pricetax` varchar(32) DEFAULT NULL,
+  `price2` varchar(32) DEFAULT NULL,
+  `pricetax2` varchar(32) DEFAULT NULL,
+  `reduce_automobiletax` varchar(10) DEFAULT NULL,
+  `activemodel` tinyint(1) DEFAULT NULL,
+  `swpmodel` tinyint(1) DEFAULT NULL,
+  `accessoryprice` varchar(16) DEFAULT NULL,
+  `managementfee` varchar(16) DEFAULT NULL,
+  `bonuspaymentratepattern` int(11) DEFAULT NULL,
+  `initratepattern` int(11) DEFAULT NULL,
+  `wpinitratepattern` int(11) DEFAULT NULL,
+  `swpinitratepattern` int(11) DEFAULT NULL,
+  `stdinitratepattern` int(11) DEFAULT NULL,
+  `supinitratepattern` int(11) DEFAULT NULL,
+  `alsinitratepattern` int(11) DEFAULT NULL,
+  `clsinitratepattern` int(11) DEFAULT NULL,
+  `wplptpattern` int(11) DEFAULT NULL,
+  `wpratepattern` varchar(20) DEFAULT NULL,
+  `wpbptpattern` int(11) DEFAULT NULL,
+  `wplpppattern` int(11) DEFAULT NULL,
+  `swplptrate` int(11) DEFAULT NULL,
+  `swpratepattern` varchar(20) DEFAULT NULL,
+  `swpbptpattern` int(11) DEFAULT NULL,
+  `swplpppattern` int(11) DEFAULT NULL,
+  `stdratepattern` varchar(20) DEFAULT NULL,
+  `stdbptpattern` int(11) DEFAULT NULL,
+  `stdlpppattern` int(11) DEFAULT NULL,
+  `supratepattern` varchar(20) DEFAULT NULL,
+  `supbptpattern` int(11) DEFAULT NULL,
+  `suplpppattern` int(11) DEFAULT NULL,
+  `alsratepattern` varchar(20) DEFAULT NULL,
+  `alslptpattern` int(11) DEFAULT NULL,
+  `alsbptpattern` int(11) DEFAULT NULL,
+  `alslpppattern` int(11) DEFAULT NULL,
+  `clsratepattern` varchar(20) DEFAULT NULL,
+  `popmodel` int(11) DEFAULT '0',
+  `popstart` datetime DEFAULT NULL,
+  `popfinish` datetime DEFAULT NULL,
+  `pop` int(11) DEFAULT NULL,
+  `popurl` varchar(200) DEFAULT NULL,
+  `popcomment` text,
+  `qc_classname` varchar(100) DEFAULT NULL,
+  `qc_classorder` varchar(3) DEFAULT NULL,
+  `mmm` varchar(10) DEFAULT NULL,
+  `mms` varchar(10) DEFAULT NULL,
+  `ev` varchar(10) DEFAULT NULL,
+  `mmm2` varchar(10) DEFAULT NULL,
+  `mms2` varchar(10) DEFAULT NULL,
+  `ev2` varchar(10) DEFAULT NULL,
+  `automobiletax` int(11) DEFAULT NULL,
+  `tonnagetax` int(11) DEFAULT NULL,
+  `recyclefee` int(11) DEFAULT NULL,
+  `reduce_tonnagetaxrate` int(11) DEFAULT NULL,
+  `reduce_acquisitiontaxrate` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=222 ;
+
+-- --------------------------------------------------------
+
+--
+-- テーブルの構造 `MB_cars_smart_fortwo`
+--
+
+CREATE TABLE IF NOT EXISTS `MB_cars_smart_fortwo` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `bmst` varchar(32) DEFAULT NULL,
+  `classname` varchar(32) DEFAULT NULL,
+  `carname` varchar(64) DEFAULT NULL,
+  `qc_carname` varchar(80) DEFAULT NULL,
+  `price` varchar(32) DEFAULT NULL,
+  `pricetax` varchar(32) DEFAULT NULL,
+  `price2` varchar(32) DEFAULT NULL,
+  `pricetax2` varchar(32) DEFAULT NULL,
+  `reduce_automobiletax` varchar(10) DEFAULT NULL,
+  `activemodel` tinyint(1) DEFAULT NULL,
+  `swpmodel` tinyint(1) DEFAULT NULL,
+  `accessoryprice` varchar(16) DEFAULT NULL,
+  `managementfee` varchar(16) DEFAULT NULL,
+  `bonuspaymentratepattern` int(11) DEFAULT NULL,
+  `initratepattern` int(11) DEFAULT NULL,
+  `wpinitratepattern` int(11) DEFAULT NULL,
+  `swpinitratepattern` int(11) DEFAULT NULL,
+  `stdinitratepattern` int(11) DEFAULT NULL,
+  `supinitratepattern` int(11) DEFAULT NULL,
+  `alsinitratepattern` int(11) DEFAULT NULL,
+  `clsinitratepattern` int(11) DEFAULT NULL,
+  `wplptpattern` int(11) DEFAULT NULL,
+  `wpratepattern` varchar(20) DEFAULT NULL,
+  `wpbptpattern` int(11) DEFAULT NULL,
+  `wplpppattern` int(11) DEFAULT NULL,
+  `swplptrate` int(11) DEFAULT NULL,
+  `swpratepattern` varchar(20) DEFAULT NULL,
+  `swpbptpattern` int(11) DEFAULT NULL,
+  `swplpppattern` int(11) DEFAULT NULL,
+  `stdratepattern` varchar(20) DEFAULT NULL,
+  `stdbptpattern` int(11) DEFAULT NULL,
+  `stdlpppattern` int(11) DEFAULT NULL,
+  `supratepattern` varchar(20) DEFAULT NULL,
+  `supbptpattern` int(11) DEFAULT NULL,
+  `suplpppattern` int(11) DEFAULT NULL,
+  `alsratepattern` varchar(20) DEFAULT NULL,
+  `alslptpattern` int(11) DEFAULT NULL,
+  `alsbptpattern` int(11) DEFAULT NULL,
+  `alslpppattern` int(11) DEFAULT NULL,
+  `clsratepattern` varchar(20) DEFAULT NULL,
+  `popmodel` int(11) DEFAULT '0',
+  `popstart` datetime DEFAULT NULL,
+  `popfinish` datetime DEFAULT NULL,
+  `pop` int(11) DEFAULT NULL,
+  `popurl` varchar(200) DEFAULT NULL,
+  `popcomment` text,
+  `qc_classname` varchar(100) DEFAULT NULL,
+  `qc_classorder` varchar(3) DEFAULT NULL,
+  `mmm` varchar(10) DEFAULT NULL,
+  `mms` varchar(10) DEFAULT NULL,
+  `ev` varchar(10) DEFAULT NULL,
+  `mmm2` varchar(10) DEFAULT NULL,
+  `mms2` varchar(10) DEFAULT NULL,
+  `ev2` varchar(10) DEFAULT NULL,
+  `automobiletax` int(11) DEFAULT NULL,
+  `tonnagetax` int(11) DEFAULT NULL,
+  `recyclefee` int(11) DEFAULT NULL,
+  `reduce_tonnagetaxrate` int(11) DEFAULT NULL,
+  `reduce_acquisitiontaxrate` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=222 ;
+
+-- --------------------------------------------------------
+
+--
+-- テーブルの構造 `MB_initrates`
+--
+
+CREATE TABLE IF NOT EXISTS `MB_initrates` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `patternid` int(10) unsigned NOT NULL,
+  `installments` int(11) NOT NULL,
+  `bonuspayment` int(11) DEFAULT NULL,
+  `downpayment` int(11) DEFAULT NULL,
+  `lastpayment` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=11 ;
+
+-- --------------------------------------------------------
+
+--
+-- ビュー用の代替構造 `MB_loancalcsheetlogs`
+--
+CREATE TABLE IF NOT EXISTS `MB_loancalcsheetlogs` (
+`created` datetime
+,`dealername` varchar(50)
+,`fullname` varchar(50)
+,`nw` varchar(10)
+,`username` varchar(50)
+,`mode` int(11)
+,`tax` varchar(10)
+,`bmst` varchar(30)
+,`classname` varchar(60)
+,`carname` varchar(60)
+,`plan` varchar(10)
+,`registyear` varchar(10)
+,`registmonth` varchar(10)
+,`pricetax` varchar(10)
+,`discount` varchar(10)
+,`makeroption` varchar(10)
+,`dealeroption` varchar(10)
+,`taxtotal` varchar(10)
+,`salesexpenses` varchar(10)
+,`sonota` varchar(10)
+,`mmmprice` varchar(10)
+,`mmsprice` varchar(10)
+,`evprice` varchar(10)
+,`mbinsureance` varchar(10)
+,`zansai` varchar(10)
+,`downpayment` varchar(10)
+,`loanprincipal` varchar(10)
+,`cartotal` varchar(10)
+,`installments` varchar(10)
+,`rate` varchar(10)
+,`normalrate` varchar(10)
+,`firstpayment` varchar(10)
+,`monthlypayment` varchar(10)
+,`lastpayment` varchar(10)
+,`bonuspayment` varchar(10)
+,`bonustimes` varchar(10)
+,`bonusmonth1` varchar(10)
+,`bonusmonth2` varchar(10)
+,`monthlyinterest` varchar(10)
+,`lastinterest` varchar(10)
+,`interest` varchar(10)
+,`totalinterest` varchar(10)
+,`loantotal` varchar(10)
+,`leafletimage` varchar(20)
+,`difference` varchar(10)
+,`salesman` int(11)
+,`prate` varchar(10)
+,`pinterest` varchar(10)
+,`ploantotal` varchar(10)
+,`pfirstpayment` varchar(10)
+,`pmonthlypayment` varchar(10)
+,`svicost` varchar(10)
+,`srepair` varchar(10)
+,`smaintenance` varchar(10)
+,`soption` varchar(10)
+);
+-- --------------------------------------------------------
+
+--
+-- テーブルの構造 `MB_lpprates`
+--
+
+CREATE TABLE IF NOT EXISTS `MB_lpprates` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `patternid` int(11) NOT NULL,
+  `installments` int(11) NOT NULL,
+  `maxrate` int(11) NOT NULL,
+  `minrate` int(11) NOT NULL,
+  `price` varchar(16) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=35 ;
+
+-- --------------------------------------------------------
+
+--
+-- テーブルの構造 `MB_lptrates`
+--
+
+CREATE TABLE IF NOT EXISTS `MB_lptrates` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `patternid` int(11) NOT NULL,
+  `installments` int(11) NOT NULL,
+  `maxrate` int(11) NOT NULL,
+  `minrate` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=17 ;
+
+-- --------------------------------------------------------
+
+--
+-- テーブルの構造 `MB_popdatas`
+--
+
+CREATE TABLE IF NOT EXISTS `MB_popdatas` (
+  `id` int(11) NOT NULL,
+  `parentid` int(11) DEFAULT NULL,
+  `mode` varchar(10) NOT NULL,
+  `plan` varchar(10) NOT NULL,
+  `bmst` varchar(16) NOT NULL,
+  `carname` varchar(64) DEFAULT NULL,
+  `price` varchar(32) DEFAULT NULL,
+  `classname` varchar(20) NOT NULL,
+  `rate` varchar(10) NOT NULL,
+  `normalrate` varchar(10) DEFAULT NULL,
+  `milage` varchar(5) DEFAULT NULL,
+  `installments` varchar(10) NOT NULL,
+  `loanprincipal` varchar(10) NOT NULL,
+  `pricetax` varchar(10) NOT NULL,
+  `optiontotal` varchar(10) NOT NULL,
+  `sonota` varchar(10) DEFAULT NULL,
+  `dealeraccessories` varchar(10) NOT NULL,
+  `mmmaintenance` varchar(10) NOT NULL,
+  `mmsupport` varchar(10) NOT NULL,
+  `salesexpenses` varchar(10) NOT NULL,
+  `mbinsureance` varchar(10) NOT NULL,
+  `dealeroption` varchar(10) DEFAULT NULL,
+  `regfee` varchar(10) DEFAULT NULL,
+  `discount` varchar(10) DEFAULT NULL,
+  `taxtotal` varchar(10) NOT NULL,
+  `downpayment` varchar(10) NOT NULL,
+  `bonuspayment` varchar(10) NOT NULL,
+  `lastpayment` varchar(10) NOT NULL,
+  `interest` varchar(10) NOT NULL,
+  `total` varchar(10) NOT NULL,
+  `difference` varchar(10) DEFAULT NULL,
+  `bonustimes` varchar(10) NOT NULL,
+  `monthlypayment` varchar(10) NOT NULL,
+  `firstpayment` varchar(10) NOT NULL,
+  `leasingprice` varchar(12) NOT NULL DEFAULT '0',
+  `imagepath01` varchar(200) DEFAULT NULL,
+  `imagepath02` varchar(200) DEFAULT NULL,
+  `imagepath03` varchar(200) DEFAULT NULL,
+  `imagepath04` varchar(200) DEFAULT NULL,
+  `imagepath05` varchar(200) DEFAULT NULL,
+  `imagepath06` varchar(200) DEFAULT NULL,
+  `imagepath07` varchar(200) DEFAULT NULL,
+  `imagepath08` varchar(200) DEFAULT NULL,
+  `imagepath09` varchar(200) DEFAULT NULL,
+  `imagepath10` varchar(200) DEFAULT NULL,
+  `pdf` tinyint(1) NOT NULL DEFAULT '0',
+  `salesman` varchar(80) DEFAULT NULL,
+  `created` datetime NOT NULL,
+  `ip` varchar(200) NOT NULL,
+  `agent` varchar(200) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- テーブルの構造 `MB_quickcharts`
+--
+
+CREATE TABLE IF NOT EXISTS `MB_quickcharts` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `version` varchar(20) NOT NULL,
+  `date` date NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=34 ;
+
+-- --------------------------------------------------------
+
+--
+-- テーブルの構造 `MB_rates`
+--
+
+CREATE TABLE IF NOT EXISTS `MB_rates` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `patternid` varchar(20) NOT NULL,
+  `installments` int(10) unsigned NOT NULL,
+  `rate` varchar(16) NOT NULL,
+  `lowrate` varchar(10) NOT NULL,
+  `innerrate` varchar(10) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=213 ;
+
+-- --------------------------------------------------------
+
+--
+-- テーブルの構造 `MB_sources`
+--
+
+CREATE TABLE IF NOT EXISTS `MB_sources` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(20) NOT NULL,
+  `filename` varchar(40) NOT NULL,
+  `comment` varchar(200) NOT NULL,
+  `lastupdated` datetime NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=289 ;
+
+-- --------------------------------------------------------
+
+--
+-- テーブルの構造 `MB_taxoptions`
+--
+
+CREATE TABLE IF NOT EXISTS `MB_taxoptions` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `bmst` varchar(20) NOT NULL,
+  `carname` varchar(100) DEFAULT NULL,
+  `reducerate` int(11) DEFAULT NULL,
+  `option01` varchar(20) DEFAULT NULL,
+  `option01name` varchar(100) DEFAULT NULL,
+  `option02` varchar(20) DEFAULT NULL,
+  `option02name` varchar(100) DEFAULT NULL,
+  `option03` varchar(20) DEFAULT NULL,
+  `option03name` varchar(100) DEFAULT NULL,
+  `option04` varchar(20) DEFAULT NULL,
+  `option04name` varchar(100) DEFAULT NULL,
+  `option05` varchar(20) DEFAULT NULL,
+  `option05name` varchar(100) DEFAULT NULL,
+  `comments` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=67 ;
+
+-- --------------------------------------------------------
+
+--
+-- テーブルの構造 `MB_users`
+--
+
+CREATE TABLE IF NOT EXISTS `MB_users` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(50) NOT NULL COMMENT 'ユーザID',
+  `password` varchar(50) NOT NULL,
+  `dealername` varchar(50) DEFAULT NULL COMMENT '販売店名',
+  `fullname` varchar(50) DEFAULT NULL COMMENT '氏名',
+  `kana` varchar(50) DEFAULT NULL COMMENT 'ふりがな',
+  `telnumber` varchar(50) DEFAULT NULL COMMENT '連絡先電話番号',
+  `faxnumber` varchar(50) DEFAULT NULL COMMENT 'FAX番号',
+  `email` varchar(100) NOT NULL,
+  `nw` varchar(10) NOT NULL,
+  `usedwp` tinyint(1) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1467 ;
+
+-- --------------------------------------------------------
+
+--
+-- テーブルの構造 `SM_accesslogs`
+--
+
+CREATE TABLE IF NOT EXISTS `SM_accesslogs` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `mode` varchar(10) NOT NULL,
+  `plan` varchar(10) NOT NULL,
+  `bmst` varchar(16) NOT NULL,
+  `carname` varchar(64) DEFAULT NULL,
+  `price` varchar(32) DEFAULT NULL,
+  `classname` varchar(10) NOT NULL,
+  `rate` varchar(10) NOT NULL,
+  `installments` varchar(10) NOT NULL,
+  `loanprincipal` varchar(10) NOT NULL,
+  `pricetax` varchar(10) NOT NULL,
+  `optionprice` varchar(10) NOT NULL,
+  `automobiletax` varchar(32) DEFAULT NULL,
+  `acquisitiontax` varchar(32) DEFAULT NULL,
+  `tonnagetax` varchar(32) DEFAULT NULL,
+  `insurance` varchar(32) DEFAULT NULL,
+  `recycle` varchar(32) DEFAULT NULL,
+  `leasetaxtotal` varchar(32) DEFAULT NULL,
+  `taxtotal` varchar(10) NOT NULL,
+  `downpayment` varchar(10) NOT NULL,
+  `bonuspayment` varchar(10) NOT NULL,
+  `lastpayment` varchar(10) NOT NULL,
+  `interest` varchar(10) NOT NULL,
+  `total` varchar(10) NOT NULL,
+  `bonustimes` varchar(10) NOT NULL,
+  `monthlypayment` varchar(10) NOT NULL,
+  `firstpayment` varchar(10) NOT NULL,
+  `leasingprice` varchar(12) NOT NULL DEFAULT '0',
+  `mnt_start` varchar(10) DEFAULT NULL,
+  `mnt_second` varchar(10) DEFAULT NULL,
+  `imagepath01` varchar(200) DEFAULT NULL,
+  `imagepath02` varchar(200) DEFAULT NULL,
+  `imagepath03` varchar(200) DEFAULT NULL,
+  `imagepath04` varchar(200) DEFAULT NULL,
+  `imagepath05` varchar(200) DEFAULT NULL,
+  `imagepath06` varchar(200) DEFAULT NULL,
+  `imagepath07` varchar(200) DEFAULT NULL,
+  `imagepath08` varchar(200) DEFAULT NULL,
+  `imagepath09` varchar(200) DEFAULT NULL,
+  `imagepath10` varchar(200) DEFAULT NULL,
+  `pdf` tinyint(1) NOT NULL DEFAULT '0',
+  `created` datetime NOT NULL,
+  `ip` varchar(200) NOT NULL,
+  `agent` varchar(200) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=225 ;
+
+-- --------------------------------------------------------
+
+--
+-- テーブルの構造 `SM_alsoptions`
+--
+
+CREATE TABLE IF NOT EXISTS `SM_alsoptions` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `optionid` varchar(200) NOT NULL,
+  `special` tinyint(1) DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- テーブルの構造 `SM_bptrates`
+--
+
+CREATE TABLE IF NOT EXISTS `SM_bptrates` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `patternid` int(11) NOT NULL,
+  `installments` int(11) NOT NULL,
+  `maxrate` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=24 ;
+
+-- --------------------------------------------------------
+
+--
+-- テーブルの構造 `SM_cars`
+--
+
+CREATE TABLE IF NOT EXISTS `SM_cars` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `bmst` varchar(16) DEFAULT NULL,
+  `classname` varchar(32) DEFAULT NULL,
+  `carname` varchar(64) DEFAULT NULL,
+  `price` varchar(32) DEFAULT NULL,
+  `pricetax` varchar(32) DEFAULT NULL,
+  `automobiletax` varchar(32) NOT NULL,
+  `tonnagetax` varchar(32) NOT NULL,
+  `insurance` varchar(32) NOT NULL,
+  `recycle` varchar(32) NOT NULL,
+  `activemodel` tinyint(1) DEFAULT NULL,
+  `swpmodel` tinyint(1) DEFAULT NULL,
+  `accessoryprice` varchar(16) DEFAULT NULL,
+  `managementfee` varchar(16) DEFAULT NULL,
+  `plan_id` int(10) unsigned DEFAULT NULL,
+  `zanka_id` int(10) unsigned DEFAULT NULL,
+  `wprate` int(10) unsigned NOT NULL,
+  `swpsatepattern` int(11) unsigned DEFAULT NULL,
+  `bonuspaymentratepattern` int(11) NOT NULL,
+  `initratepattern` int(11) NOT NULL,
+  `wpinitratepattern` int(11) NOT NULL,
+  `swpinitratepattern` int(11) NOT NULL,
+  `stdinitratepattern` int(11) NOT NULL,
+  `supinitratepattern` int(11) NOT NULL,
+  `alsinitratepattern` int(11) NOT NULL,
+  `wplptpattern` int(11) DEFAULT NULL,
+  `wpratepattern` int(11) DEFAULT NULL,
+  `wpbptpattern` int(11) DEFAULT NULL,
+  `wplpppattern` int(11) DEFAULT NULL,
+  `swplptrate` int(11) DEFAULT NULL,
+  `swpratepattern` int(11) DEFAULT NULL,
+  `swpbptpattern` int(11) DEFAULT NULL,
+  `swplpppattern` int(11) DEFAULT NULL,
+  `stdratepattern` int(11) DEFAULT NULL,
+  `stdbptpattern` int(11) DEFAULT NULL,
+  `stdlpppattern` int(11) DEFAULT NULL,
+  `supratepattern` int(11) DEFAULT NULL,
+  `supbptpattern` int(11) DEFAULT NULL,
+  `suplpppattern` int(11) DEFAULT NULL,
+  `alsratepattern` int(11) DEFAULT NULL,
+  `alslptpattern` int(11) DEFAULT NULL,
+  `alsbptpattern` int(11) DEFAULT NULL,
+  `alslpppattern` int(11) DEFAULT NULL,
+  `swpflg` int(11) NOT NULL DEFAULT '1',
+  `lowratemodel` int(11) NOT NULL DEFAULT '0',
+  `lowratestart` datetime DEFAULT NULL,
+  `lowratefinish` datetime DEFAULT NULL,
+  `pop` int(11) DEFAULT NULL,
+  `popurl` varchar(200) DEFAULT NULL,
+  `popcomment` text,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
+
+-- --------------------------------------------------------
+
+--
+-- テーブルの構造 `SM_initrates`
+--
+
+CREATE TABLE IF NOT EXISTS `SM_initrates` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `patternid` int(10) unsigned NOT NULL,
+  `installments` int(11) NOT NULL,
+  `bonuspayment` int(11) DEFAULT NULL,
+  `downpayment` int(11) DEFAULT NULL,
+  `lastpayment` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9 ;
+
+-- --------------------------------------------------------
+
+--
+-- テーブルの構造 `SM_lpprates`
+--
+
+CREATE TABLE IF NOT EXISTS `SM_lpprates` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `patternid` int(11) NOT NULL,
+  `installments` int(11) NOT NULL,
+  `maxrate` int(11) NOT NULL,
+  `minrate` int(11) NOT NULL,
+  `price` varchar(16) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=32 ;
+
+-- --------------------------------------------------------
+
+--
+-- テーブルの構造 `SM_lptrates`
+--
+
+CREATE TABLE IF NOT EXISTS `SM_lptrates` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `patternid` int(11) NOT NULL,
+  `installments` int(11) NOT NULL,
+  `maxrate` int(11) NOT NULL,
+  `minrate` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10 ;
+
+-- --------------------------------------------------------
+
+--
+-- テーブルの構造 `SM_rates`
+--
+
+CREATE TABLE IF NOT EXISTS `SM_rates` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `patternid` int(10) unsigned NOT NULL,
+  `installments` int(10) unsigned NOT NULL,
+  `rate` varchar(16) NOT NULL,
+  `lowrate` varchar(10) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=59 ;
+
+-- --------------------------------------------------------
+
+--
+-- ビュー用の構造 `MB_loancalcsheetlogs`
+--
+DROP TABLE IF EXISTS `MB_loancalcsheetlogs`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`jk.my22.etius.jp`@`dc42.etius.jp` SQL SECURITY DEFINER VIEW `MB_loancalcsheetlogs` AS select `MB_calclogs`.`created` AS `created`,`MB_users`.`dealername` AS `dealername`,`MB_users`.`fullname` AS `fullname`,`MB_users`.`nw` AS `nw`,`MB_users`.`username` AS `username`,`MB_calclogs`.`mode` AS `mode`,`MB_calclogs`.`tax` AS `tax`,`MB_calclogs`.`bmst` AS `bmst`,`MB_calclogs`.`classname` AS `classname`,`MB_calclogs`.`carname` AS `carname`,`MB_calclogs`.`plan` AS `plan`,`MB_calclogs`.`registyear` AS `registyear`,`MB_calclogs`.`registmonth` AS `registmonth`,`MB_calclogs`.`pricetax` AS `pricetax`,`MB_calclogs`.`discount` AS `discount`,`MB_calclogs`.`makeroption` AS `makeroption`,`MB_calclogs`.`dealeroption` AS `dealeroption`,`MB_calclogs`.`taxtotal` AS `taxtotal`,`MB_calclogs`.`salesexpenses` AS `salesexpenses`,`MB_calclogs`.`sonota` AS `sonota`,`MB_calclogs`.`mmmprice` AS `mmmprice`,`MB_calclogs`.`mmsprice` AS `mmsprice`,`MB_calclogs`.`evprice` AS `evprice`,`MB_calclogs`.`mbinsureance` AS `mbinsureance`,`MB_calclogs`.`zansai` AS `zansai`,`MB_calclogs`.`downpayment` AS `downpayment`,`MB_calclogs`.`loanprincipal` AS `loanprincipal`,`MB_calclogs`.`cartotal` AS `cartotal`,`MB_calclogs`.`installments` AS `installments`,`MB_calclogs`.`rate` AS `rate`,`MB_calclogs`.`normalrate` AS `normalrate`,`MB_calclogs`.`firstpayment` AS `firstpayment`,`MB_calclogs`.`monthlypayment` AS `monthlypayment`,`MB_calclogs`.`lastpayment` AS `lastpayment`,`MB_calclogs`.`bonuspayment` AS `bonuspayment`,`MB_calclogs`.`bonustimes` AS `bonustimes`,`MB_calclogs`.`bonusmonth1` AS `bonusmonth1`,`MB_calclogs`.`bonusmonth2` AS `bonusmonth2`,`MB_calclogs`.`monthlyinterest` AS `monthlyinterest`,`MB_calclogs`.`lastinterest` AS `lastinterest`,`MB_calclogs`.`interest` AS `interest`,`MB_calclogs`.`totalinterest` AS `totalinterest`,`MB_calclogs`.`loantotal` AS `loantotal`,`MB_calclogs`.`leafletimage` AS `leafletimage`,`MB_calclogs`.`difference` AS `difference`,`MB_calclogs`.`salesman` AS `salesman`,`MB_calclogs`.`prate` AS `prate`,`MB_calclogs`.`pinterest` AS `pinterest`,`MB_calclogs`.`ploantotal` AS `ploantotal`,`MB_calclogs`.`pfirstpayment` AS `pfirstpayment`,`MB_calclogs`.`pmonthlypayment` AS `pmonthlypayment`,`MB_calclogs`.`svicost` AS `svicost`,`MB_calclogs`.`srepair` AS `srepair`,`MB_calclogs`.`smaintenance` AS `smaintenance`,`MB_calclogs`.`soption` AS `soption` from (`MB_calclogs` left join `MB_users` on((`MB_calclogs`.`salesman` = `MB_users`.`id`)));
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

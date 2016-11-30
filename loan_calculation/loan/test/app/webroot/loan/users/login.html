@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>ログイン｜ローン計算シート</title>
+<link rel="stylesheet" href="/loan/css/loan.css">
+<script src="/loan/js/jquery-1.9.1.js"></script>
+<script src="/loan/js/loan.js"></script>
+</head>
+
+<body>
+<div id="loginform">
+<div class="header01">
+<div class="header-lay">
+<p class="site-id"><img src="/loan/img/header/site-id.png" alt="Mercedes-Benz -Finance Calculation-" width="364" height="50"></p>
+<!-- /.header01-lay --></div>
+<!-- /.header01 --></div>
+
+<div class="contents">
+<div class="main-contents01">
+
+<div class="blk-login01">
+<form action="http://mbfj.co-site.jp/loan/users/login" method="post">
+<input type="hidden" name="_method" value="POST">
+<ul class="login-input">
+<li><img src="/loan/img/login/term-loginid.png" alt="ユーザー名" width="80" height="20" class="term"><input name="data[User][username]" type="text" id="username" maxlength="50" value=""></li>
+<li><img src="/loan/img/login/term-pw.png" alt="パスワード" width="80" height="20" class="term"><input type="password" name="data[User][password]" id="password" value=""></li>
+</ul>
+<p class="submit"><input type="image" src="/loan/img/login/btn-login.png" alt="ログイン"></p>
+</form>
+<p class="download"><a href="#" target="_blank">セールスマンモード登録用紙（PDF）のダウンロードはこちら</a></p>
+<!-- /.blk-login01 --></div>
+
+<!-- /.main-contents01 --></div>
+<!-- /.contents --></div>
+
+<div class="footer01">
+<p class="version">ver.2013.04.05</p>
+<p class="copyright">&copy;Mercedes-Benz Finance Co., Ltd. All rights reserved.</p>
+<!-- /.footer01 --></div>
+<!-- /#loginform --></div>
+</html>

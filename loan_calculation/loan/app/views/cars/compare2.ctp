@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>新車比較見積り｜ローン計算シート</title>
+<link rel="stylesheet" href="/loan/css/loan.css">
+<script src="/loan/js/jquery-1.9.1.js"></script>
+<script src="/loan/js/loan.js"></script>
+<script src="/loan/js/run.js"></script>
+</head>
+
+<body>
+<!-- ////////////////////新車比較見積りここから//////////////////// -->
+<div id="newcar_comparing">
+<div class="header01">
+<div class="header-lay">
+<p class="site-id"><img src="/loan/img/header/site-id.png" alt="Mercedes-Benz -Finance Calculation-" width="364" height="50"></p>
+<p class="btn02"><a href="#" target="_blank"><img src="/loan/img/header/btn-comparing-pdf.png" alt="比較見積りPDF" width="208" height="46"></a></p>
+<p class="btn01"><a href="#" class="window-close"><img src="/loan/img/header/btn-close.png" alt="閉じる" width="168" height="46"></a></p>
+<!-- /.header01-lay --></div>
+<!-- /.header01 --></div>
+
+<div class="contents">
+<div class="main-contents01">
+
+<div class="blk-comparing01">
+<div class="cont"><!-- 入力された条件 -->
+<p class="title-type02">入力された条件</p>
+<p class="title-type03">スーパーウェルカムプラン</p>
+<table border="1" class="tbl-type01">
+<thead>
+<tr>
+<th colspan="2" class="pay">月々のお支払い<strong>23,000円</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>お支払年数（回数）</th>
+<td><span>5年</span></td>
+</tr>
+<tr>
+<th>実質年率</th>
+<td><span>3.9%</span></td>
+</tr>
+<tr>
+<th>頭金</th>
+<td><span>2,451,170</span>円</td>
+</tr>
+<tr>
+<th>ボーナス月加算金額</th>
+<td><span>133,000</span>円</td>
+</tr>
+<tr>
+<th>残価</th>
+<td><span>2,290,000</span>円</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="tbl-type01">
+<tbody>
+<tr>
+<th>ローン元金</th>
+<td><span>67,072</span>円</td>
+</tr>
+<tr>
+<th>初回お支払い額</th>
+<td><span>663,822</span>円</td>
+</tr>
+<tr>
+<th>2回目以降お支払額（59）回</th>
+<td><span>67,072</span>円</td>
+</tr>
+<tr>
+<th>ボーナス月加算金額（10回）</th>
+<td><span>133,000</span>円</td>
+</tr>
+<tr>
+<th>最終回お支払総額（残価）</th>
+<td><span>2,290,000</span>円</td>
+</tr>
+<tr>
+<th>分割払い手数料</th>
+<td><span>663,822</span>円</td>
+</tr>
+<tr>
+<th>ローンお支払い総額</th>
+<td><span>67,072</span>円</td>
+</tr>
+<tr>
+<th>通常金利との差額</th>
+<td><span>67,072</span>円</td>
+</tr>
+</tbody>
+</table>
+<ul class="list-result-btn01">
+<li><a href="#" target="_blank"><img src="/loan/img/contents/btn-estimate02.png" alt="見積書PDF" width="107" height="46"></a></li>
+<li><a href="#" target="_blank"><img src="/loan/img/contents/btn-proposal02.png" alt="個別提案書PDF" width="107" height="46"></a></li>
+</ul>
+<!-- /. cont--></div>
+
+<div class="cont"><!-- 条件1：お支払い条件のみ変更 -->
+<p class="title-type02">条件1：お支払い条件のみ変更</p>
+<p class="space-btm01 align-type03">
+<div class="select-custom02">
+<div class="inner"><span>&nbsp;</span></div>
+<select><option>ウェルカムプラン</option><option>スーパーウェルカムプラン</option><option>スタンダードローン</option></select>
+<!-- /.select-custom02 --></div>
+<table border="1" class="tbl-type01">
+<thead>
+<tr>
+<th colspan="2" class="pay">月々のお支払い<strong>23,000円</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>お支払年数（回数）</th>
+<td>
+<div class="select-custom03 side-left">
+<div class="inner"><span>&nbsp;</span></div>
+<select><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select>
+<!-- /.select-custom03 --></div>
+年</td>
+</tr>
+<tr>
+<th>実質年率</th>
+<td><span>3.9%</span></td>
+</tr>
+<tr>
+<th>頭金</th>
+<td><input type="text" value="" class="input-type01">円</td>
+</tr>
+<tr>
+<th>ボーナス月加算金額</th>
+<td><input type="text" value="" class="input-type01">円</td>
+</tr>
+<tr>
+<th>残価</th>
+<td><input type="text" value="" class="input-type01">円</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="tbl-type01">
+<tbody>
+<tr>
+<th>ローン元金</th>
+<td><span>67,072</span>円</td>
+</tr>
+<tr>
+<th>初回お支払い額</th>
+<td><span>663,822</span>円</td>
+</tr>
+<tr>
+<th>2回目以降お支払額（59）回</th>
+<td><span>67,072</span>円</td>
+</tr>
+<tr>
+<th>ボーナス月加算金額（10回）</th>
+<td><span>133,000</span>円</td>
+</tr>
+<tr>
+<th>最終回お支払総額（残価）</th>
+<td><span>2,290,000</span>円</td>
+</tr>
+<tr>
+<th>分割払い手数料</th>
+<td><span>663,822</span>円</td>
+</tr>
+<tr>
+<th>ローンお支払い総額</th>
+<td><span>67,072</span>円</td>
+</tr>
+<tr>
+<th>通常金利との差額</th>
+<td><span>67,072</span>円</td>
+</tr>
+</tbody>
+</table>
+<ul class="list-result-btn01">
+<li><a href="#" target="_blank"><img src="/loan/img/contents/btn-estimate02.png" alt="見積書PDF" width="107" height="46"></a></li>
+<li><a href="#" target="_blank"><img src="/loan/img/contents/btn-proposal02.png" alt="個別提案書PDF" width="107" height="46"></a></li>
+<li><a href="#"><img src="/loan/img/contents/btn-calc02.png" alt="計算" width="78" height="46"></a></li>
+</ul>
+<!-- /. cont--></div>
+
+<div class="cont"><!-- 条件2：条件1を元にファイナンスプランを変更 -->
+<p class="title-type02">条件2：条件1を元にファイナンスプランを変更</p>
+<p class="space-btm01 align-type03">
+<div class="select-custom02">
+<div class="inner"><span>&nbsp;</span></div>
+<select><option>プラン選択</option><option>ウェルカムプラン</option><option>スーパーウェルカムプラン</option><option>スタンダードローン</option></select>
+<!-- /.select-custom02 --></div>
+<table border="1" class="tbl-type01">
+<thead>
+<tr>
+<th colspan="2" class="pay">月々のお支払い<strong>23,000円</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>お支払年数（回数）</th>
+<td>
+<div class="select-custom03 side-left">
+<div class="inner"><span>&nbsp;</span></div>
+<select><option>回数選択</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select>
+<!-- /.select-custom03 --></div>
+年</td>
+</tr>
+<tr>
+<th>実質年率</th>
+<td><span>3.9%</span></td>
+</tr>
+<tr>
+<th>頭金</th>
+<td><input type="text" value="" class="input-type01">円</td>
+</tr>
+<tr>
+<th>ボーナス月加算金額</th>
+<td><input type="text" value="" class="input-type01">円</td>
+</tr>
+<tr>
+<th>残価</th>
+<td><input type="text" value="" class="input-type01">円</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="tbl-type01">
+<tbody>
+<tr>
+<th>ローン元金</th>
+<td><span>67,072</span>円</td>
+</tr>
+<tr>
+<th>初回お支払い額</th>
+<td><span>663,822</span>円</td>
+</tr>
+<tr>
+<th>2回目以降お支払額（59）回</th>
+<td><span>67,072</span>円</td>
+</tr>
+<tr>
+<th>ボーナス月加算金額（10回）</th>
+<td><span>133,000</span>円</td>
+</tr>
+<tr>
+<th>最終回お支払総額（残価）</th>
+<td><span>2,290,000</span>円</td>
+</tr>
+<tr>
+<th>分割払い手数料</th>
+<td><span>663,822</span>円</td>
+</tr>
+<tr>
+<th>ローンお支払い総額</th>
+<td><span>67,072</span>円</td>
+</tr>
+<tr>
+<th>通常金利との差額</th>
+<td><span>67,072</span>円</td>
+</tr>
+</tbody>
+</table>
+<ul class="list-result-btn01">
+<li><a href="#" target="_blank"><img src="/loan/img/contents/btn-estimate02.png" alt="見積書PDF" width="107" height="46"></a></li>
+<li><a href="#" target="_blank"><img src="/loan/img/contents/btn-proposal02.png" alt="個別提案書PDF" width="107" height="46"></a></li>
+<li><a href="#"><img src="/loan/img/contents/btn-calc02.png" alt="計算" width="78" height="46"></a></li>
+</ul>
+<!-- /. cont--></div>
+<!-- /.blk-comparing01 --></div>
+
+<!-- /.main-contents01 --></div>
+<!-- /.contents --></div>
+
+<div class="footer01">
+<p class="version">ver.2013.04.05</p>
+<p class="copyright">&copy;Mercedes-Benz Finance Co., Ltd. All rights reserved.</p>
+<!-- /.footer01 --></div>
+<!-- /#newcar_comparing --></div>
+<!-- ////////////////////新車比較見積りここまで//////////////////// -->
+
+<script>
+	uiInit();
+	logicInit();
+</script>
+</body>
+</html>
